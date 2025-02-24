@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fare Zone Difference</title>
+</head>
+<body>
+<h2>Find Fare Zone Difference</h2>
+
+<form th:action="@{/find-zone-difference}" method="get">
+    <label for="station1">Enter First Station:</label>
+    <input type="text" id="station1" name="station1" required>
+
+    <label for="station2">Enter Second Station:</label>
+    <input type="text" id="station2" name="station2" required>
+
+    <button type="submit">Find Difference</button>
+</form>
+
+<div th:if="${zoneDifference}">
+    <h3>Fare Zone Difference: <span th:text="${zoneDifference}"></span></h3>
+</div>
+
+<div th:if="${error}">
+    <h3 style="color:red;">Error: <span th:text="${error}"></span></h3>
+</div>
+</body>
+</html>
