@@ -24,8 +24,8 @@ public class stationController {
         System.out.println(station1+ station2);
         try {
             int zoneDiff = stationService.findfareZoneDifference(station1, station2);
-            System.out.println(zoneDiff);
             model.addAttribute("zone-difference", zoneDiff);
+            System.out.println(zoneDiff);
         }
         catch(Exception e)
         {
